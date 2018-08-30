@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "28.0.1"
+
+    defaultConfig {
+        applicationId "com.torcellite.imageComparator"
+        minSdkVersion 8
+        targetSdkVersion 10
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    api project(':openCVLibrary320')
+    implementation 'com.android.support:support-v4:21.0.3'
+}
